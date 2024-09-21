@@ -63,8 +63,7 @@ void loop() {
 void motor(int speed) {
   analogWrite(ENB, abs(speed));
    // Set speed using PWM
-  if (speed > 0) {
-    
+  if (speed > 0) { 
     digitalWrite(IN1, LOW);
     digitalWrite(IN2, HIGH);
   } else if (speed < 0) {
