@@ -59,6 +59,7 @@ void loop() {
   }
     pcurrent = current;
 }
+
 void motor(int speed) {
   analogWrite(ENB, abs(speed));
    // Set speed using PWM
