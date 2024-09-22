@@ -25,11 +25,11 @@ void loop() {
   float current = (voltage - (referenceVoltage / 2.0)) / sensitivity;
   
   // Print the current value to the serial monitor
-  //Serial.print("Current: ");
+  Serial.print("Current: ");
   Serial.println(current);
-  //Serial.println(" A");
-  // delay(500); // Delay for 1 second
-  if(abs(current) > 2){
+  Serial.println(" A");
+  // delay(1000); // Delay for 1 second
+  if(abs(current) > 2){ //1. control the current, set a max allowance to prevent hotness on the device. 2. Also serves as a indicator that the blinds reach to the top limit.
     motor(0);
   }
   //else if (abs(current) < 1){
